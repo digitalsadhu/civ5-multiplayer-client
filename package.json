@@ -1,0 +1,31 @@
+{
+  "name": "civ5-multiplayer-client",
+  "version": "0.0.1",
+  "description": "A client to watch and sync Civilization 5 save game files to a remote server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/digitalsadhu/civ5-multiplayer-client.git"
+  },
+  "keywords": [
+    "civ",
+    "civilization",
+    "client",
+    "game"
+  ],
+  "author": "Richard Walker <digitalsadhu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/digitalsadhu/civ5-multiplayer-client/issues"
+  },
+  "homepage": "https://github.com/digitalsadhu/civ5-multiplayer-client",
+  "dependencies": {
+    "envoodoo": "^2.0.1",
+    "form-data": "^0.1.4",
+    "request": "^2.36.0",
+    "watch": "^0.10.0"
+  }
+}
