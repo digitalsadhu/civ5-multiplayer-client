@@ -1,0 +1,8 @@
+{
+    "SAVE_GAME_DIRECTORY_PATH": "/Users/digitalsadhu/Documents/Aspyr/Sid Meier's Civilization 5/Saves/hotseat",
+    "SAVE_GAME_FILENAME": "shared.Civ5Save",
+    "GAME_SERVER_HOST": "http://127.0.0.1",
+    "GAME_SERVER_PORT": 3501,
+    "GAME_SERVER_ENDPOINT": "game",
+    "GAME_SERVER_SYNC_ENDPOINT": "sync"
+}
