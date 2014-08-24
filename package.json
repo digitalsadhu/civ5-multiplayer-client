@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/digitalsadhu/civ5-multiplayer-client",
   "dependencies": {
-    "envoodoo": "^2.0.1",
+    "config.json": "0.0.3",
     "form-data": "^0.1.4",
     "request": "^2.36.0",
     "watch": "^0.10.0"

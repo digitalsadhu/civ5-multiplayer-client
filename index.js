@@ -1,15 +1,13 @@
-var env      = require('envoodoo')
-  , watch    = require('watch')
-  , fs       = require('fs')
-  , request  = require('request')
-  , path     = require('path')
-
-env()
+var config  = require('config.json')()
+  , watch   = require('watch')
+  , fs      = require('fs')
+  , request = require('request')
+  , path    = require('path')
 
 var match = false
 
-var dirpath = path.normalize(process.env.SAVE_GAME_DIRECTORY_PATH)
-var filename = path.normalize(process.env.SAVE_GAME_FILE_NAME)
+var dirpath = path.normalize(config.SAVE_GAME_DIRECTORY_PATH)
+var filename = path.normalize(config.SAVE_GAME_FILENAME)
 
 //push files to server
 
@@ -54,8 +52,8 @@ watch.createMonitor(dirpath, options, function (monitor) {
     var fileStream = fs.createReadStream(filepath)
 
     var url = [
-      [process.env.GAME_SERVER_HOST, process.env.GAME_SERVER_PORT].join(':'),
-      process.env.GAME_SERVER_ENDPOINT
+      [config.GAME_SERVER_HOST, config.GAME_SERVER_PORT].join(':'),
+      config.GAME_SERVER_ENDPOINT
     ].join('/')
 
     console.log('[INFO]', 'sending file...')
@@ -80,8 +78,8 @@ setInterval(function () {
     var modified = stats.mtime.getTime()
 
     var url = [
-      [process.env.GAME_SERVER_HOST, process.env.GAME_SERVER_PORT].join(':'),
-      process.env.GAME_SERVER_SYNC_ENDPOINT,
+      [config.GAME_SERVER_HOST, config.GAME_SERVER_PORT].join(':'),
+      config.GAME_SERVER_SYNC_ENDPOINT,
       modified
     ].join('/')
 
